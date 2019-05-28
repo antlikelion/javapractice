@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1>여기가 바뀔거에요</h1>
+    <h1 id="result">____________________</h1>
+    <input type="text" id="input" />
+    <script>
+      let result = document.querySelector("#result");
+      let input = document.querySelector("#input");
+      $("input").keydown(function(key) {
+        if (key.keyCode == 13) {
+          result.textContent = input.value;
+        }
+      });
+      // function keydown(event) {
+      //   result.textContent = input.value;
+      // }
+      // input.addEventListener('keyup',keyup)
+      // function keyup(event){
+      //   result.textContent=input.value
+      //   // console.log(input.value)
+      // }
+    </script>
+  </body>
+</html>
