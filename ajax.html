@@ -1,0 +1,27 @@
+<head>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+</head>  
+<body>
+    <h1>깡생이</h1>
+    <button type="button">이얍</button>
+    <img src="" />
+    <script>
+        $("button").click(function(){
+            $.ajax({
+                url:'https://dog.ceo/api/breeds/image/random',
+                success:function(data){
+                    console.log(data.message)
+                    $("img").attr("src",data.message)
+                },
+                beforeFunction(){
+                    
+                }
+            })
+        })
+    </script>
+</body>
+  

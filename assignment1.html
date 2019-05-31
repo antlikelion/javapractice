@@ -15,7 +15,7 @@
       let result = document.querySelector("#result");
       let input = document.querySelector("#input");
       $("input").keydown(function(key) {
-        if (key.keyCode == 13) {
+        if (key.keyCode === 13) {
           result.textContent = input.value;
         }
       });
